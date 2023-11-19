@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+    <title>Hobby</title>
+    <style>
+        @font-face {
+            font-family: 'Arapey';
+            src: url('fonts/Arapey-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Arapey', sans-serif;
+            /* Use the font in your styles */
+        }
+        .background-navbar { 
+            background: linear-gradient(to right, #001233, #004785);
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light .navbar-nav .nav-link {
+            color: #ffffff; /* Set your desired font color */
+            padding-left: 40px;
+        }
+
+        .navbar-light .navbar-brand:hover,
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: cyan; /* Set your desired highlight color */
+        }
+
+        .navbar-light .navbar-nav .active>.nav-link,
+        .navbar-light .navbar-nav .nav-link.active,
+        .navbar-light .navbar-nav .nav-link.show,
+        .navbar-light .navbar-nav .show>.nav-link {
+            color: cyan; /* Set your desired active item color */
+        }
+
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.6); /* Adjust the alpha (fourth value) for transparency */
+        }
+
+        .dropdown-menu a {
+            color: white !important;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #333; /* Change to the desired darker color */
+            color: white !important;
+        }
+
+        .footer {
+            bottom: 0;
+            width: 100%;
+            color: white;
+            padding: 2%;
+            text-align: center;
+            background: linear-gradient(to right,#004785, #001233);
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+            .container h1{
+                text-align: center;
+                padding: 20px;
+            }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            transition: filter 0.5s ease;
+        }
+
+        .image-container:hover img {
+            filter: blur(5px);
+        }
+
+        .image-description-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            background: rgba(255, 255, 255, 0.7); /* Transparent white background */
+            padding: 15px; /* Adjust padding as needed */
+            border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+        }
+
+        .image-description-container h1 {
+            font-weight: bold;
+        }
+
+        .image-container:hover .image-description-container {
+            opacity: 1;
+        }
+
+        .image-description {
+            /* Adjust description styles as needed */
+            color: #000000;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light background-navbar">
+        <a class="navbar-brand" href="#">
+            <img src="Images/lightblue.png" alt="Logo" class="logo" style="width: 150px; margin-right: 10px; max-height: 100%; margin-left: 15%;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Books.html">Top 10</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Gallery.html">Gallery<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Contact.html">Contacts</a>
+                </li>
+                <!-- Example sub-menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sub Menu
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#hobbies">Hobbies</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" id="hobbies">
+        <h1 style="font-weight: bold; font-size: 50px;">H O B B I E S</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/wine.jpg" class="img-fluid" alt="Image 2">
+                    <div class="image-description-container">
+                        <h1>Champagne</h1>
+                        <p class="image-description">Couple trying to have fun with class~.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/space.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>MOOOON</h1>
+                        <p class="image-description">Two secret agents tracking down the hiding evil overlord mastermind villain</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/matrix.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>Matrix</h1>
+                        <p class="image-description">GGSS yawa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/turtle.jpg" class="img-fluid" alt="Image 3" style="max-width: 400px;">
+                    <div class="image-description-container">
+                        <h1>Life</h1>
+                        <p class="image-description">Artwork that represents what life is. The turtles trying their best to reach water represents the reality of life, beautiful yet tragic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/paint.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>Waves</h1>
+                        <p class="image-description">A simple digital artwork that represents the beauty and horror of something can represent to different perspectives.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/paint2.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>Community</h1>
+                        <p class="image-description">A digital artwork created to represent how a community should process. It represents the unity and cooperation a community should have for it to prosper and grow.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/doctor.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>Psychopaths</h1>
+                        <p class="image-description">Two mad scientist dissecting poor teddy bear in the motivation of science.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/ros.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>Dichotomy</h1>
+                        <p class="image-description">An artwork that represents the duality of a man.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="image-container" data-aos="fade-up">
+                    <img src="Images/elle.jpg" class="img-fluid" alt="Image 3">
+                    <div class="image-description-container">
+                        <h1>GIGACHAD</h1>
+                        <p class="image-description">Hindi ako ang drawing neto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            &copy; 2023 Symone Vincent Baquing <br>
+            Final project <br>
+            All rights reserved.
+        </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

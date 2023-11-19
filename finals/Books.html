@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href='https://fonts.googleapis.com/css?family=Alegreya Sans SC' rel='stylesheet'>
+    <title>Title</title>
+    <style>
+        
+        @font-face {
+            font-family: 'Arapey';
+            src: url('fonts/Arapey-Regular.ttf') format('truetype');
+        }
+
+        body {
+            font-family: 'Arapey', sans-serif;
+            /* Use the font in your styles */
+        }
+
+        .background-navbar { 
+            background: linear-gradient(to right, #001233, #004785);
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .navbar-light .navbar-brand,
+        .navbar-light .navbar-nav .nav-link {
+            color: #ffffff; /* Set your desired font color */
+            padding-left: 40px;
+        }
+
+        .navbar-light .navbar-brand:hover,
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: cyan; /* Set your desired highlight color */
+        }
+
+        .navbar-light .navbar-nav .active>.nav-link,
+        .navbar-light .navbar-nav .nav-link.active,
+        .navbar-light .navbar-nav .nav-link.show,
+        .navbar-light .navbar-nav .show>.nav-link {
+            color: cyan; /* Set your desired active item color */
+        }
+
+        .dropdown-menu {
+            background-color: rgba(0, 0, 0, 0.6); /* Adjust the alpha (fourth value) for transparency */
+        }
+
+        .dropdown-menu a {
+            color: white !important;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #333; /* Change to the desired darker color */
+            color: white !important;
+        }
+
+        .footer {
+            bottom: 0;
+            width: 100%;
+            color: white;
+            padding: 2%;
+            text-align: center;
+            background: linear-gradient(to bottom,#004785, #001233);
+        }
+
+        .image-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to bottom,#001233, lightblue);
+            text-align: justify;
+            color: white;
+        }
+
+        .image-section h2 {
+            font-weight: bold;
+        }
+
+        .image-section h3 {
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .image-section p {
+            font-size: 25px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            max-height: 300px; /* Adjust height as needed */
+        }
+
+        .image-section-text {
+            margin-left: 20px;
+            flex: 1;
+        }
+
+        .right-section {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to right, #001233, #004785);
+            background-color: white; /* Set a different background color */
+            text-align: justify;
+            color: white;
+        }
+
+        .right-section p {
+            font-size: 22px;
+        }
+
+        .right-section h2 {
+            font-weight: bold;
+        }
+
+        .right-section h3 {
+            padding-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .image-container img{
+            max-width: 100%;
+            max-height: 400px;
+        }
+
+        .title-container {
+            background: linear-gradient(to right, #001233, #001233);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: white;
+        }
+
+        .title-container h1 {
+            font-size: 75px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light background-navbar">
+        <a class="navbar-brand" href="#">
+          <img src="Images/lightblue.png" alt="Logo" class="logo" style="width: 150px; margin-right: 10px; max-height: 100%; margin-left: 15%;">
+      </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="Books.html">Top 10<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact.html">Contacts</a>
+            </li>
+            <!-- Example sub-menu -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sub Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#Top10">Top 10 Novels</a>
+              </div>
+            </li>
+            <!-- Add more sub-menus as needed -->
+          </ul>
+        </div>
+    </nav>
+<div class="title-container" id="Top10">
+    <h1>TOP 10 RECOMMENDED NOVELS</h1>
+</div>
+<div class="image-section" style="background: linear-gradient(to bottom, #001233, #004785);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/shadowslave.jpeg" class="img-fluid" alt="Novel Image 1">
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 1 Shadow Slave</h2>
+                    <h3>By Guiltythree</h3>
+                    <p>This is the most recent Novel I had the great luck of encountering. It is the 2nd novel created by Guiltythree who is a very new author. Surprisingly, he hooked me with  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="right-section" style="background: linear-gradient(to top,#004785, #004785); color: white;">
+">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 2 The Legendary Mechanic</h2>
+                    <h3>By Qi Peijia</h3>
+                    <p>
+                        This has been a great experience with me. It had such a good plot, being the main character becoming a NPC (non playable character) in the game,
+                        while also interacting with other players, trying to post as an actual npc by giving mission to only use tham as cheap manual labor. Although there
+                        was a lot of things i skimmed because of how detailed some explanations are, this was such a great experience to me and i know this novel will be remembered for years.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/legendary.jpeg" class="img-fluid" alt="Novel Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Repeat the above structure for other sections -->
+<div class="image-section" style="background: linear-gradient(to top,#004785, #004785); color: white;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/Achievement.jpeg" class="img-fluid" alt="Novel Image 1">
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 3 The Achievement Junkie by TheSilverQuill</h2>
+                    <p>
+                        The novel is all about a person getting transported inside the game after having 100% completion of all achievements. Basically, he completed the game
+                        with all the missions and all the things you can do the game had been done. Now with that depth of knowledge, he is now tasked to save the world again after
+                        the so called "players" disappeared for centuries and are all now myths.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="right-section" style="background: linear-gradient(to bottom,#004785, #001233);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 4 Chrysalis by RinoZ</h2>
+                    <p>
+                        It started with a perspective of someone who cannot see or feel anything, but they know their body, their spirit is being molded into something else. After an unknown amount of time, he opened his eyes for the first and last time. He was now “alive” but not as a human, but as an ant. It’s about a story about jolly ANThony trying to survive as an ant. This simple like novel is not as simple as I thought it would, specially the great reveal how he died and the reason why he was revived as an ant. It’s a fun unique story that is I highly encourage you to read no matter what age.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/chrysalis.jpeg" class="img-fluid" alt="Novel Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-section" style="background: linear-gradient(to bottom,#001233, #001233);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/overlord.jpeg" class="img-fluid" alt="Novel Image 1">
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 5 Overlord by Kugane Maruyama</h2>
+                    <p>
+                        The plot begins on the last day of Yggdrasil, a popular online game that is being quietly discontinued. Momonga, our protagonist, decides to stay in his favorite game until the very end, so he waits for the forced logout. Unexpectedly, the server does not shut down, and Momonga is trapped in another world as a skeleton avatar. "The powerful Overlord" must now explore the new world and face the ongoing challenges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="right-section" style="background: linear-gradient(to bottom,#001233, #001233);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 6 That Time I Reincarnated as a Slime by Fuse</h2>
+                    <p>
+                        The plot begins on the last day of Yggdrasil, a popular online game that is being quietly discontinued. Momonga, our protagonist, decides to stay in his favorite game until the very end, so he waits for the forced logout. Unexpectedly, the server does not shut down, and Momonga is trapped in another world as a skeleton avatar. "The powerful Overlord" must now explore the new world and face the ongoing challenges.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/slime.jpeg" class="img-fluid" alt="Novel Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-section" style="background: linear-gradient(to bottom,#001233, #001233);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/sololeveling.jpeg" class="img-fluid" alt="Novel Image 1">
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 7 Solo Leveling by Chugong</h2>
+                    <p>
+                        In a world where magical hunters battle monsters, Sung Jinwoo, a weak hunter, faces endless survival struggles. He is chosen by the System program after surviving a powerful dungeon, granting him rare strength levels. He fights enemies in order to discover dungeon secrets and his powers. I got hooked by the art style of manga but stayed for the novel, although now that the manga is finished I fell in love with both.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="right-section" style="background: linear-gradient(to top,#004785, #001233);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 8 The Omniscient Reader's Viewpoint by Sing Shong</h2>
+                    <p>
+                        Omniscient reader’s Viewpoint is a story about a story. A story that revolves and is fueled around multiple mini stories. I had trouble trying to explain this novel but I think that sums how good this novel is, keeping you hooked not expecting to happen because almost anything can happen.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/omniscient.jpeg" class="img-fluid" alt="Novel Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="image-section" style="background: linear-gradient(to bottom,#004785, #004785);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/vampire.jpeg" class="img-fluid" alt="Novel Image 1">
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 9 My Vampire System by JKSManga</h2>
+                    <p>
+                        The human race is fighting the Vicious Dalki, and hidden humans with special abilities emerge. Some people share their knowledge to win the war, while others keep their skills to themselves. Quinn, who has lost everything, receives a book and gains power through quests. However, he is confronted with a quest that he is unable to complete. It's about a young boy who is given something that will change his life forever.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="right-section" style="background: linear-gradient(to top,#004785, #004785);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" data-aos="fade-up">
+                <div>
+                    <h2>Top 10 Free Fall by Guiltythree</h2>
+                    <p>
+                        Wraiths are genetically altered people with unique abilities. However, ability does not always imply power: it often simply makes you a target. This is especially true for Matthew, who may be one of the most powerful wraiths in the world - and thus must conceal his power and rely on cunning to survive. And then there's the girl who wants him to be a member of her rock band...
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up">
+                <div class="image-container">
+                    <img src="Images/freefall.jpeg" class="img-fluid" alt="Novel Image 2">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="footer" >
+        <p>
+            &copy; 2023 Symone Vincent Baquing <br>
+            Final project <br>
+            All rights reserved.
+        </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
